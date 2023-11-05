@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Dashboard</title>
+    <link rel="stylesheet" href="../styles/components.css">
+    <link rel="stylesheet" href="../styles/specification.css">
+</head>
+<body>
+    <header id="app-header" class="flex flex-row flex-nowrap item-center jus-between">
+        <div id="group-start" class="flex item-center gap-8">
+            <!-- Hamburger Button -->
+            <button id="hamburger-menu" class="Button-withLogo hover-pointer">
+                <img src="../public/vectors/hamburger-menu.svg">
+            </button>
+
+            <!-- Github Logo -->
+            <img src="../public/vectors/logo.svg" id="github-logo">
+            <h5 id="dashboard-text" class="font-h5 font-semibold hover-pointer Button-noBorderColor">Dashboard</h5>
+        </div>
+        
+
+        <div id="group-end" class="flex item-center gap-8">
+            <!-- Search bar/Command palette button-->
+            <div id="search-bar-container" class="flex item-center pad-4">
+                <div id="search-bar">
+                    <label for="search-input" class="hover-pointer">
+                        <img src="../public/vectors/search-icon.svg" id="search-icon">
+                    </label>
+                    <button id="search-input" class="hover-pointer">              
+                        <span class="font-h5" id="search-textPlaceholder">Type <kbd>/</kbd> to search</span>
+                    </button>
+                </div>
+                <span class="divider mar-2"></span>
+                <button id="command-palette" class="Button-noBorderColor hover-pointer">
+                    <img src="../public/vectors/terminal-icon.svg" alt="terminal-icon">
+                </button>
+            </div>
+            
+            <span class="divider mar-4"></span>
+    
+            <div id="create-new-dropdown-menu">
+                <button id="create-new-button" class="Button-withLogo hover-pointer">
+                    <span><img src="../public/vectors/plus_sign-icon.svg"></span>
+                    <span><img src="../public/vectors/dropdown-icon.svg"></span>
+                </button>
+            </div>
+    
+            <div id="issues-container">
+                <button id="issues-menu" class="Button-withLogo hover-pointer">
+                    <img src="../public/vectors/issues-icon.svg">
+                </button>
+            </div>
+    
+            <div id="pull-request-container">
+                <button id="pull-request-menu" class="Button-withLogo hover-pointer">
+                    <img src="../public/vectors/pull-request-icon.svg">
+                </button>
+            </div>
+
+            <div id="inbox-container">
+                <button id="inbox-button" class="Button-withLogo hover-pointer">
+                    <img src="../public/vectors/inbox.svg">
+                </button>
+            </div>
+    
+            <div id="profile-container">
+                <!-- some img here -->
+            </div>
+        </div>
+    </header>
+</body>
+</html>

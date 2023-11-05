@@ -1,0 +1,12 @@
+.container {
+    display: flex;
+    width: 100vw;
+}
+
+.start {
+    align-self: flex-start;
+}
+
+.end {
+    align-self: flex-end;
+}
