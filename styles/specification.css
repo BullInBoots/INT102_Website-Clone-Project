@@ -1,3 +1,5 @@
+@import url("./cssReset.css");
+
 :root {
   --base-size-4: 0.25rem;
   --base-size-8: 0.5rem;
@@ -20,11 +22,14 @@
   --base-text-weight-normal: 400;
   --base-text-weight-medium: 500;
   --base-text-weight-semibold: 600;
-  --primary: #000408;
-  --secondary: #0c1116;
-  --tertiary: rgb(201, 209, 217);
-  --accent: #1e6eeb;
-  --link-secondary: #8b949e;
+  --color-primary: #000408;
+  --color-secondary: #0c1116;
+  --color-tertiary: rgb(201, 209, 217);
+  --color-accent: #1e6eeb;
+  --color-linkPrimary: #58a6ff;
+  --color-linkSecondary: #8b949e;
+  --color-textPlaceholder: #5b626c;
+  --color-buttonWithTextAndIcon: #21262d;
   --h00-size: 3rem;
   --h0-size: 2.5rem;
   --h1-size: 2rem;
@@ -43,21 +48,18 @@
   --borderColor-full: rgba(201, 209, 217, 1);
   --borderColor-half: rgba(201, 209, 217, 0.5);
   --borderColor-quarter: rgba(201, 209, 217, 0.25);
-  --control-bodyTransparent: rgba(255, 255, 255, 0.1);
+  --control-bodyTransparent: rgba(255, 255, 255, 0.125);
 }
 
-body,
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    "Helvetica Neue", sans-serif;
+  font-family: "Segoe UI", "Helvetica Neue", sans-serif;
   font-size: 16px;
 }
 
-body {
-  overflow: scroll;
+button:focus:not(:focus-visible), input[type=text]:focus:not(:focus-visible), a:focus:not(:focus-visible) {
+  outline: none !important;
+  box-shadow: inset 0 0 0 1px transparent;
+  border-color: var(--color-accent);
 }
 
 /* Box Model properties */
@@ -66,101 +68,101 @@ body {
   padding: var(--base-size-4);
 }
 .pad-8 {
-  padding: var(--base-size-4);
+  padding: var(--base-size-8);
 }
 .pad-12 {
-  padding: var(--base-size-4);
+  padding: var(--base-size-12);
 }
 .pad-16 {
-  padding: var(--base-size-4);
+  padding: var(--base-size-16);
 }
 .pad-20 {
-  padding: var(--base-size-4);
+  padding: var(--base-size-20);
 }
 .pad-24 {
-  padding: var(--base-size-4);
+  padding: var(--base-size-24);
 }
 .pad-28 {
-  padding: var(--base-size-4);
+  padding: var(--base-size-28);
 }
 .pad-32 {
-  padding: var(--base-size-4);
+  padding: var(--base-size-32);
 }
 .pad-36 {
-  padding: var(--base-size-4);
+  padding: var(--base-size-36);
 }
 .pad-40 {
-  padding: var(--base-size-4);
+  padding: var(--base-size-40);
 }
 .pad-44 {
-  padding: var(--base-size-4);
+  padding: var(--base-size-44);
 }
 .pad-48 {
-  padding: var(--base-size-4);
+  padding: var(--base-size-48);
 }
 .pad-64 {
-  padding: var(--base-size-4);
+  padding: var(--base-size-64);
 }
 .pad-80 {
-  padding: var(--base-size-4);
+  padding: var(--base-size-80);
 }
 .pad-96 {
-  padding: var(--base-size-4);
+  padding: var(--base-size-96);
 }
 .pad-112 {
-  padding: var(--base-size-4);
+  padding: var(--base-size-112);
 }
 .pad-128 {
-  padding: var(--base-size-4);
+  padding: var(--base-size-128);
 }
 
 .mar-4 {
   margin: var(--base-size-4);
 }
 .mar-8 {
-  margin: var(--base-size-4);
+  margin: var(--base-size-8);
 }
 .mar-12 {
-  margin: var(--base-size-4);
+  margin: var(--base-size-12);
 }
 .mar-16 {
-  margin: var(--base-size-4);
+  margin: var(--base-size-16);
 }
 .mar-20 {
-  margin: var(--base-size-4);
+  margin: var(--base-size-20);
 }
 .mar-24 {
-  margin: var(--base-size-4);
+  margin: var(--base-size-24);
 }
 .mar-28 {
-  margin: var(--base-size-4);
+  margin: var(--base-size-28);
 }
 .mar-32 {
-  margin: var(--base-size-4);
+  margin: var(--base-size-32);
 }
 .mar-36 {
-  margin: var(--base-size-4);
+  margin: var(--base-size-36);
 }
 .mar-40 {
-  margin: var(--base-size-4);
+  margin: var(--base-size-40);
 }
 .mar-48 {
-  margin: var(--base-size-4);
+  margin: var(--base-size-48);
 }
 .mar-64 {
-  margin: var(--base-size-4);
+  margin: var(--base-size-64);
 }
 .mar-80 {
-  margin: var(--base-size-4);
+  margin: var(--base-size-80);
 }
 .mar-96 {
-  margin: var(--base-size-4);
+  margin: var(--base-size-96);
 }
 .mar-112 {
-  margin: var(--base-size-4);
+  margin: var(--base-size-112);
 }
 .mar-128 {
-  margin: var(--base-size-4);
+  margin: var(--base-size-128);
 }
 /* Color properties */
 
@@ -168,7 +170,25 @@ body {
   fill: var(--tertiary);
 }
 
+/* Scrolling behavior property */
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.overflow-scroll-y {
+  overflow-y: scroll;
+}
+
+.overflow-scroll-x {
+  overflow-x: scroll;
+}
+
 /* Font properties */
+
+.font-color-muted {
+  color: var(--color-linkSecondary);
+}
 
 .font-h00 {
   font-size: var(--h00-size);
@@ -226,7 +246,21 @@ body {
   font-weight: var(--base-text-weight-semibold);
 }
 
+/* Flow */
+
+.inline {
+  display: inline;
+}
+
+.block {
+  display: block;
+}
+
 /* Flexbox section */
+
+.inline-flex {
+  display: inline-flex;
+}
 
 .flex {
   display: flex;
@@ -374,4 +408,10 @@ body {
 
 .gap-32 {
   gap: var(--base-size-32);
+}
+
+/* Cursor properties */
+
+.cursor-pointer {
+  cursor: pointer;
 }

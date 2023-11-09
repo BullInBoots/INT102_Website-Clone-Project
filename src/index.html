@@ -4,71 +4,187 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GitHub Dashboard</title>
+    <link rel="stylesheet" href="../styles/cssReset.css">
     <link rel="stylesheet" href="../styles/components.css">
     <link rel="stylesheet" href="../styles/specification.css">
+    <script src="./scripts/index.js" defer></script>
 </head>
 <body>
-    <header id="app-header" class="flex flex-row flex-nowrap item-center jus-between">
-        <div id="group-start" class="flex item-center gap-8">
-            <!-- Hamburger Button -->
-            <button id="hamburger-menu" class="Button-withLogo hover-pointer">
-                <img src="../public/vectors/hamburger-menu.svg">
-            </button>
-
-            <!-- Github Logo -->
-            <img src="../public/vectors/logo.svg" id="github-logo">
-            <h5 id="dashboard-text" class="font-h5 font-semibold hover-pointer Button-noBorderColor">Dashboard</h5>
-        </div>
-        
-
-        <div id="group-end" class="flex item-center gap-8">
-            <!-- Search bar/Command palette button-->
-            <div id="search-bar-container" class="flex item-center pad-4">
-                <div id="search-bar">
-                    <label for="search-input" class="hover-pointer">
-                        <img src="../public/vectors/search-icon.svg" id="search-icon">
-                    </label>
-                    <button id="search-input" class="hover-pointer">              
-                        <span class="font-h5" id="search-textPlaceholder">Type <kbd>/</kbd> to search</span>
+    <header>
+        <div id="app-header" class="flex flex-nowrap item-center pad-16 jus-between">
+            <div id="app-header-groupStart" class="flex item-center gap-8">
+                <!-- Hamburger -->
+                <div class="buttonWithIcon-container">
+                    <button class="app-header-button cursor-pointer">
+                        <img src="../public/vectors/hamburger-menu.svg">
                     </button>
                 </div>
-                <span class="divider mar-2"></span>
-                <button id="command-palette" class="Button-noBorderColor hover-pointer">
-                    <img src="../public/vectors/terminal-icon.svg" alt="terminal-icon">
-                </button>
+                <!-- Icon -->
+                <div id="logo-container">
+                    <button id="logo-icon" class="cursor-pointer">
+                        <img src="../public/vectors/logo.svg">
+                    </button>
+                </div>
+                <!-- Dashboard Text -->
+                <div class="buttonWithText-container">
+                    <button class="flex item-center jus-center font-semibold font-h5 cursor-pointer app-header-buttonWithText">
+                        Dashboard
+                    </button>
+                </div>
             </div>
-            
-            <span class="divider mar-4"></span>
-    
-            <div id="create-new-dropdown-menu">
-                <button id="create-new-button" class="Button-withLogo hover-pointer">
-                    <span><img src="../public/vectors/plus_sign-icon.svg"></span>
-                    <span><img src="../public/vectors/dropdown-icon.svg"></span>
-                </button>
-            </div>
-    
-            <div id="issues-container">
-                <button id="issues-menu" class="Button-withLogo hover-pointer">
-                    <img src="../public/vectors/issues-icon.svg">
-                </button>
-            </div>
-    
-            <div id="pull-request-container">
-                <button id="pull-request-menu" class="Button-withLogo hover-pointer">
-                    <img src="../public/vectors/pull-request-icon.svg">
-                </button>
-            </div>
+            <div id="app-header-groupEnd" class="flex item-center gap-8">
+                <!-- Search bar -->
+                <div id="searchButton-container" class="flex item-center gap-4">
+                    <label for="searchButton">
+                        <img src="../public/vectors/search-icon.svg">
+                    </label>
+                    <button id="searchButton" class="flex item-center cursor-pointer">
+                        <span class="font-h5">Type <kbd>/</kbd> to search</span>
+                    </button>
+                    <button id="commandPaletteButton" class="app-header-buttonWithText cursor-pointer">
+                        <img src="../public/vectors/terminal-icon.svg">
+                    </button>
+                </div>
 
-            <div id="inbox-container">
-                <button id="inbox-button" class="Button-withLogo hover-pointer">
-                    <img src="../public/vectors/inbox.svg">
-                </button>
-            </div>
-    
-            <div id="profile-container">
-                <!-- some img here -->
+                <span class="divider"></span>
+                <!-- Create new -->
+                <div class="buttonWithIcon-container">
+                    <button id="createNewButton" class="app-header-button gap-4 cursor-pointer">
+                        <img src="../public/vectors/plus_sign-icon.svg">
+                        <img src="../public/vectors/dropdown-icon.svg">
+                    </button>
+                </div>
+                <!-- Issue -->
+                <div class="buttonWithIcon-container">
+                    <button class="app-header-button cursor-pointer">
+                        <img src="../public/vectors/issues-icon.svg">
+                    </button>
+                </div>
+                <!-- Pull Request -->
+                <div class="buttonWithIcon-container">
+                    <button class="app-header-button cursor-pointer">
+                        <img src="../public/vectors/pull-request-icon.svg">
+                    </button>
+                </div>
+                <!-- Inbox -->
+                <div class="buttonWithIcon-container">
+                    <button class="app-header-button cursor-pointer">
+                        <img src="../public/vectors/inbox.svg">
+                    </button>
+                </div>
+                <!-- Profile -->
+                <div id="profile-container" class="flex item-center cursor-pointer">
+                    <img src="../public/images/profile-image.jpg">
+                </div>
             </div>
         </div>
     </header>
+
+    <main>
+        <div id="app-main" class="flex flex-nowrap">
+            <div id="app-sidebar">
+                <div id="app-sidebar-container">
+                    <div id="app-sidebar-header" class="flex item-center jus-between">
+                        <h2 class="font-h5 font-semibold">Top Repositories</h2>
+                        <a href="newRepository.html" id="app-sidebar-header-button" class="flex item-center gap-4">
+                            <img src="../public/vectors/repository.svg">
+                            <span class="font-h6 font-semibold">New</span>
+                        </a>
+                    </div>
+                    <div id="app-sidebar-search">
+                        <input type="text" id="app-sidebar-searchInput" placeholder="Find a repository..." class="font-h5">
+                    </div>
+                    <div id="app-sidebar-repository">
+                        <ul id="repo-list">
+                            <!-- this space is filled with fragment from index.js -->
+                        </ul>
+                        <div id="repo-showMore" class="flex item-center">
+                            <button id="showMore-button" class="font-h6">Show more</button>
+                        </div>
+                    </div>
+                    <div id="app-sidebar-footer">
+                        <h5 class="font-h5">Recent activity</h5>
+                        <div class="recent-activity-container flex item-center gap-8">
+                            <div class="activity-icon">
+                                <img src="../public/vectors/pull-request-icon.svg">
+                            </div>
+                            <div class="activity-description flex flex-column">
+                                <div class="repo font-h6">siam-yam/int100-2023</div>
+                                <div class="activity font-h5">Update readme.md</div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div id="app-content">
+                <div id="app-content-container" class="flex flex-nowrap gap-24">
+                    <div id="app-content-left" class="flex flex-column gap-8">
+                        <div class="flex flex-nowrap jus-between item-center" id="app-content-left-header">
+                            <div class="groupStart">
+                                <h3 class="font-h3 font-semibold">Home</h3>
+                            </div>
+                            <div class="groupEnd flex flex-nowrap item-center gap-32">
+                                <a href="#" class="font-h5 linkPrimary">Send feedback</a>
+                                <button class="buttonWithTextAndIcon cursor-pointer" id="filter-button">
+                                    <img src="../public/vectors/filter-icon.svg" id="filter-icon">
+                                    <span class="font-h5">Filter</span>
+                                    <span class="font-h6" id="counter">8</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="flex flex-column flex-nowrap" id="app-content-left-trend">
+                            <div class="flex flex-nowrap jus-between item-center" id="trend-header">
+                                <div class="groupStart flex item-center gap-8">
+                                    <img src="../public/vectors/trend-icon.svg">
+                                    <span class="font-h5 font-color-muted">Trending repositories</span>
+                                    <span id="dot-divider">·</span>
+                                    <a href="#" class="font-h5 linkPrimary">See more</a>
+                                </div>
+                                <div class="groupEnd flex item-center">
+                                    <img src="../public/vectors/dango-menu.svg">
+                                </div>
+                            </div>
+                            <div class="trend-repo-container">
+                                <div class="trend-repo">
+                                    <div class="trend-repo-description">
+                                        <div class="repo-name">
+                                            <div class="user-img"></div>
+                                            <span class="user-info">RepoName/AccountName</span>
+                                        </div>
+                                        <div class="repo-description">
+                                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero, quae?
+                                        </div>
+                                        <div class="repo-sub-description">
+                                            <div class="repo-programLanguage">
+                                                <div class="programLanguageColor"></div>
+                                                <span class="languageName">Programming Language</span>
+                                            </div>
+                                            <div class="star-count-container">
+                                                <img src="../public/vectors/star.svg">
+                                                <span class="star-count">12.3k</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="star-button-container">
+                                        <div class="star-button">
+                                            <img src="../public/vectors/star.svg">
+                                            <span class="star">Star</span>
+                                        </div>
+                                        <div class="dropdown-button">
+                                            <img src="../public/vectors/dropdown-icon.svg">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="app-content-right">
+                        <!-- don't put something here yet -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
 </html>
