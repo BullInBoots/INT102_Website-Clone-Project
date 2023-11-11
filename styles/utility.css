@@ -1,5 +1,3 @@
-@import url("./cssReset.css");
-
 :root {
   --base-size-4: 0.25rem;
   --base-size-8: 0.5rem;
@@ -48,6 +46,7 @@
   --borderColor-full: rgba(201, 209, 217, 1);
   --borderColor-half: rgba(201, 209, 217, 0.5);
   --borderColor-quarter: rgba(201, 209, 217, 0.25);
+  --borderColor-penny: rgba(201, 209, 217, 0.15);
   --control-bodyTransparent: rgba(255, 255, 255, 0.125);
 }
 

@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GitHub Dashboard</title>
-    <link rel="stylesheet" href="../styles/cssReset.css">
-    <link rel="stylesheet" href="../styles/components.css">
-    <link rel="stylesheet" href="../styles/specification.css">
-    <script src="./scripts/index.js" defer></script>
+    <link rel="stylesheet" href="./styles/cssReset.css">
+    <link rel="stylesheet" href="./styles/components.css">
+    <link rel="stylesheet" href="./styles/utility.css">
+    <script type="module" src="./scripts/index.js" defer></script>
 </head>
 <body>
     <header>
@@ -16,13 +16,13 @@
                 <!-- Hamburger -->
                 <div class="buttonWithIcon-container">
                     <button class="app-header-button cursor-pointer">
-                        <img src="../public/vectors/hamburger-menu.svg">
+                        <img src="./assets/vectors/hamburger-menu.svg">
                     </button>
                 </div>
                 <!-- Icon -->
                 <div id="logo-container">
                     <button id="logo-icon" class="cursor-pointer">
-                        <img src="../public/vectors/logo.svg">
+                        <img src="./assets/vectors/logo.svg">
                     </button>
                 </div>
                 <!-- Dashboard Text -->
@@ -36,45 +36,43 @@
                 <!-- Search bar -->
                 <div id="searchButton-container" class="flex item-center gap-4">
                     <label for="searchButton">
-                        <img src="../public/vectors/search-icon.svg">
+                        <img src="./assets/vectors/search-icon.svg">
                     </label>
                     <button id="searchButton" class="flex item-center cursor-pointer">
                         <span class="font-h5">Type <kbd>/</kbd> to search</span>
                     </button>
                     <button id="commandPaletteButton" class="app-header-buttonWithText cursor-pointer">
-                        <img src="../public/vectors/terminal-icon.svg">
+                        <img src="./assets/vectors/terminal-icon.svg">
                     </button>
                 </div>
-
-                <span class="divider"></span>
                 <!-- Create new -->
-                <div class="buttonWithIcon-container">
+                <div class="buttonWithIcon-container" id="createNewButton-container">
                     <button id="createNewButton" class="app-header-button gap-4 cursor-pointer">
-                        <img src="../public/vectors/plus_sign-icon.svg">
-                        <img src="../public/vectors/dropdown-icon.svg">
+                        <img src="./assets/vectors/plus_sign-icon.svg">
+                        <img src="./assets/vectors/dropdown-icon.svg">
                     </button>
                 </div>
                 <!-- Issue -->
-                <div class="buttonWithIcon-container">
+                <div class="buttonWithIcon-container" id="issueButton-container">
                     <button class="app-header-button cursor-pointer">
-                        <img src="../public/vectors/issues-icon.svg">
+                        <img src="./assets/vectors/issues-icon.svg">
                     </button>
                 </div>
                 <!-- Pull Request -->
-                <div class="buttonWithIcon-container">
+                <div class="buttonWithIcon-container" id="pullRequestButton-container">
                     <button class="app-header-button cursor-pointer">
-                        <img src="../public/vectors/pull-request-icon.svg">
+                        <img src="./assets/vectors/pull-request-icon.svg">
                     </button>
                 </div>
                 <!-- Inbox -->
                 <div class="buttonWithIcon-container">
                     <button class="app-header-button cursor-pointer">
-                        <img src="../public/vectors/inbox.svg">
+                        <img src="./assets/vectors/inbox.svg">
                     </button>
                 </div>
                 <!-- Profile -->
                 <div id="profile-container" class="flex item-center cursor-pointer">
-                    <img src="../public/images/profile-image.jpg">
+                    <img src="./assets/images/profile-image.jpg">
                 </div>
             </div>
         </div>
@@ -82,17 +80,17 @@
 
     <main>
         <div id="app-main" class="flex flex-nowrap">
-            <div id="app-sidebar">
-                <div id="app-sidebar-container">
+            <div id="app-sidebar-container">
+                <div id="app-sidebar">
                     <div id="app-sidebar-header" class="flex item-center jus-between">
                         <h2 class="font-h5 font-semibold">Top Repositories</h2>
                         <a href="newRepository.html" id="app-sidebar-header-button" class="flex item-center gap-4">
-                            <img src="../public/vectors/repository.svg">
+                            <img src="./assets/vectors/repository.svg">
                             <span class="font-h6 font-semibold">New</span>
                         </a>
                     </div>
                     <div id="app-sidebar-search">
-                        <input type="text" id="app-sidebar-searchInput" placeholder="Find a repository..." class="font-h5">
+                        <input type="text" id="app-sidebar-searchInput" placeholder="Find a repository.." class="font-h5">
                     </div>
                     <div id="app-sidebar-repository">
                         <ul id="repo-list">
@@ -106,7 +104,7 @@
                         <h5 class="font-h5">Recent activity</h5>
                         <div class="recent-activity-container flex item-center gap-8">
                             <div class="activity-icon">
-                                <img src="../public/vectors/pull-request-icon.svg">
+                                <img src="./assets/vectors/pull-request-icon.svg">
                             </div>
                             <div class="activity-description flex flex-column">
                                 <div class="repo font-h6">siam-yam/int100-2023</div>
@@ -127,7 +125,7 @@
                             <div class="groupEnd flex flex-nowrap item-center gap-32">
                                 <a href="#" class="font-h5 linkPrimary">Send feedback</a>
                                 <button class="buttonWithTextAndIcon cursor-pointer" id="filter-button">
-                                    <img src="../public/vectors/filter-icon.svg" id="filter-icon">
+                                    <img src="./assets/vectors/filter-icon.svg" id="filter-icon">
                                     <span class="font-h5">Filter</span>
                                     <span class="font-h6" id="counter">8</span>
                                 </button>
@@ -136,13 +134,13 @@
                         <div class="flex flex-column flex-nowrap" id="app-content-left-trend">
                             <div class="flex flex-nowrap jus-between item-center" id="trend-header">
                                 <div class="groupStart flex item-center gap-8">
-                                    <img src="../public/vectors/trend-icon.svg">
+                                    <img src="./assets/vectors/trend-icon.svg">
                                     <span class="font-h5 font-color-muted">Trending repositories</span>
                                     <span id="dot-divider">·</span>
                                     <a href="#" class="font-h5 linkPrimary">See more</a>
                                 </div>
                                 <div class="groupEnd flex item-center">
-                                    <img src="../public/vectors/dango-menu.svg">
+                                    <img src="./assets/vectors/dango-menu.svg">
                                 </div>
                             </div>
                             <div class="trend-repo-container">
@@ -161,26 +159,107 @@
                                                 <span class="languageName">Programming Language</span>
                                             </div>
                                             <div class="star-count-container">
-                                                <img src="../public/vectors/star.svg">
+                                                <img src="./assets/vectors/star.svg">
                                                 <span class="star-count">12.3k</span>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="star-button-container">
                                         <div class="star-button">
-                                            <img src="../public/vectors/star.svg">
+                                            <img src="./assets/vectors/star.svg">
                                             <span class="star">Star</span>
                                         </div>
                                         <div class="dropdown-button">
-                                            <img src="../public/vectors/dropdown-icon.svg">
+                                            <img src="./assets/vectors/dropdown-icon.svg">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="trend-repo">
+                                    <div class="trend-repo-description">
+                                        <div class="repo-name">
+                                            <div class="user-img"></div>
+                                            <span class="user-info">RepoName/AccountName</span>
+                                        </div>
+                                        <div class="repo-description">
+                                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero, quae?
+                                        </div>
+                                        <div class="repo-sub-description">
+                                            <div class="repo-programLanguage">
+                                                <div class="programLanguageColor"></div>
+                                                <span class="languageName">Programming Language</span>
+                                            </div>
+                                            <div class="star-count-container">
+                                                <img src="./assets/vectors/star.svg">
+                                                <span class="star-count">12.3k</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="star-button-container">
+                                        <div class="star-button">
+                                            <img src="./assets/vectors/star.svg">
+                                            <span class="star">Star</span>
+                                        </div>
+                                        <div class="dropdown-button">
+                                            <img src="./assets/vectors/dropdown-icon.svg">
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
+                        <div id="app-footer-container" class="flex flex-nowrap">
+                            <a href="#" id="footer-logo" class="flex item-center self-start gap-4">
+                                <img src="./assets/vectors/footer-logo.svg">
+                                <span class="font-h6 ">&copy; 2023 Github, Inc.</span>
+                            </a>
+                            <ul class="footer-content-list">
+                                <li class="footer-content-listItem"><a href="#">Blog</a></li>
+                                <li class="footer-content-listItem"><a href="#">About</a></li>
+                                <li class="footer-content-listItem"><a href="#">Shop</a></li>
+                                <li class="footer-content-listItem"><a href="#">Contact Github</a></li>
+                                <li class="footer-content-listItem"><a href="#">Pricing</a></li>
+                            </ul>
+                            <ul class="footer-content-list">
+                                <li class="footer-content-listItem"><a href="#">API</a></li>
+                                <li class="footer-content-listItem"><a href="#">Training</a></li>
+                                <li class="footer-content-listItem"><a href="#">Status</a></li>
+                                <li class="footer-content-listItem"><a href="#">Security</a></li>
+                            </ul>
+                            <ul class="footer-content-list">
+                                <li class="footer-content-listItem"><a href="#">Terms</a></li>
+                                <li class="footer-content-listItem"><a href="#">Privacy</a></li>
+                                <li class="footer-content-listItem"><a href="#">Docs</a></li>
+                            </ul>
+                        </div>
                     </div>
                     <div id="app-content-right">
-                        <!-- don't put something here yet -->
+                       <div id="latest-change-container">
+                            <h5 class="font-h5 font-semibold" id="latest-change-text-header">Latest changes</h5>
+                            <div id="latest-change">
+                                <ul id="latest-change-list">
+                                    <li class="latest-change-listItem">
+                                        <span class="hours-ago font-h6">20 hours ago</span>
+                                        <span class="change-topic font-h5">GitHub Copilot in the CLI now in public beta</span>
+                                    </li>
+                                    <li class="latest-change-listItem">
+                                        <span class="hours-ago font-h6">20 hours ago</span>
+                                        <span class="change-topic font-h5">GitHub Copilot in the CLI now in public beta</span>
+                                    </li>
+                                    <li class="latest-change-listItem">
+                                        <span class="hours-ago font-h6">20 hours ago</span>
+                                        <span class="change-topic font-h5">GitHub Copilot in the CLI now in public beta</span>
+                                    </li>
+                                    <li class="latest-change-listItem">
+                                        <span class="hours-ago font-h6">20 hours ago</span>
+                                        <span class="change-topic font-h5">GitHub Copilot in the CLI now in public beta</span>
+                                    </li>
+                                    <li class="latest-change-listItem">
+                                        <a href="#" class="font-h6" id="changelog">View changelog</a>
+                                    </li>
+                                </ul>
+                            </div>
+                       </div>
                     </div>
                 </div>
             </div>

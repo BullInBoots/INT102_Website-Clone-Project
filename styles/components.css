@@ -1,7 +1,6 @@
-@import url("./specifications.css");
-
 #app-header {
     background-color: var(--color-primary);
+    box-shadow: inset 0 calc(var(--borderWidth-thin) * -1) var(--borderColor-quarter);
 }
 
 #app-header #logo-container {
@@ -29,7 +28,7 @@
 }
 
 #searchButton span {
-    padding-right: 200px;
+    padding-right: 150px;
 }
 
 #createNewButton {
@@ -78,16 +77,17 @@
     min-height: 100vh;
 }
 
-#app-sidebar {
+#app-sidebar-container {
+    border-right: var(--borderWidth-thin) solid var(--borderColor-quarter);
     background-color: var(--color-secondary);
     width: 320px;
 }
 
-#app-sidebar-container {
+#app-sidebar {
     padding: var(--base-size-16) var(--base-size-24) 0;
-    overflow-y: scroll;
     min-height: 100vh;  
 }
+
 
 #app-sidebar-header {
     margin-bottom: var(--base-size-4);
@@ -166,7 +166,7 @@
 }
 
 #app-content {
-    flex: auto;
+    flex: auto !important;
 }
 
 /* Apply this property to all button in app-content */
@@ -232,8 +232,15 @@
     border-radius: var(--borderRadius-medium);
 }
 
+.trend-repo-container > :not(:last-child) {
+    border-bottom: var(--borderWidth-thin) solid var(--borderColor-quarter);
+    padding-bottom: var(--base-size-12);
+}
+
 .trend-repo {
     margin-top: var(--base-size-8);
+    padding-top: var(--base-size-8);
+    padding-bottom: var(--base-size-8);
     display: flex;
     flex-flow: row nowrap;
 }
@@ -349,6 +356,130 @@
     border-color: var(--borderColor-half);
 }
 
+#app-footer-container {
+    margin-top: auto;
+}
+
+#footer-logo {
+    flex: 2;
+    width: 33.33%;
+    color: #6f7680;
+    text-decoration: none;
+}
+
+#footer-logo {
+    color: var(--color-linkPrimary);
+    text-decoration: underline;
+}
+
+#footer-logo {
+    color: #6f7680;
+    text-decoration: none;
+}
+
+.footer-content-list {
+    flex: 1;
+    list-style-type: none;
+}
+
+.footer-content-listItem a {
+    font-size: 12px;
+    text-decoration: none;
+    color: #6f7680;
+}
+
+.footer-content-listItem a:hover {
+    text-decoration: underline;
+    color: var(--color-linkPrimary);
+}
+
 #app-content-right {
+    flex: 1 0 auto;
     max-width: 315px;
+}
+
+#latest-change-container {
+    padding: var(--base-size-16);
+    border: var(--borderWidth-thin) solid var(--borderColor-penny);
+    border-radius: var(--borderRadius-medium);
+    background-color: var(--color-secondary);
+}
+
+#latest-change-text-header {
+    margin-bottom: var(--base-size-16);
+    color: var(--color-tertiary);
+}
+
+.latest-change-listItem {
+    padding-left: var(--base-size-20);
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+#latest-change-list > :not(:last-child) {
+    margin-bottom: var(--base-size-16);
+}
+
+#changelog {
+    text-decoration: none;
+    color: var(--color-linkSecondary);
+}
+
+.hours-ago {
+    color: var(--color-linkSecondary);
+}
+
+.change-topic {
+    color: var(--color-tertiary);
+}
+
+/* MEDIA CONTROL */
+
+/* Laptop */
+@media only screen and (max-width: 1024px) {
+    #app-content-right {
+        display: none;
+    }
+}
+
+/* Tablet */
+@media only screen and (max-width: 768px) {
+    #searchButton, #commandPaletteButton {
+        display: none;
+    }
+    #app-main {
+        display: flex;
+        flex-flow: column;
+        padding: var(--base-size-16);
+    }
+    #app-sidebar-container {
+        width: auto;
+        flex: 1 0 auto;
+        border: var(--borderWidth-thin) solid var(--borderColor-quarter);
+        border-radius: var(--borderRadius-medium);
+    }
+    #app-content-container {
+        justify-content: center;
+        padding: 0;
+    }
+    #app-content-left {
+        max-width: none;
+        flex: 1 0 auto;
+    }
+    #footer-logo {
+        display: none;
+    }
+}
+
+/* Mobile */
+@media only screen and (max-width: 425px) {
+    #createNewButton-container {
+        display: none;
+    }
+    #issueButton-container {
+        display: none;
+    }
+    #pullRequestButton-container {
+        display: none;
+    }
 }

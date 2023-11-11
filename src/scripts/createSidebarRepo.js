@@ -1,11 +1,4 @@
-console.log("index.js loaded");
-
-const defaultImageSrc = '../assets/images/profile-image.jpg';
-const userName = "AccountName";
-const repoName = "RepositoryName";
-const repoList = document.querySelector('#repo-list');
-
-function createSidebarRepo(accountName, repoName, imageUrl, maxItem) {
+export default function createSidebarRepo(accountName, repoName, imageUrl, maxItem) {
     let fragment = document.createDocumentFragment();
     
     for (let i=1; i<=maxItem; i++) {
@@ -21,5 +14,3 @@ function createSidebarRepo(accountName, repoName, imageUrl, maxItem) {
     }
     return fragment;
 }
-
-repoList.append(createSidebarRepo(userName, repoName, defaultImageSrc, 7));
