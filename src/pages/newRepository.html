@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/cssReset.css">
+    <link rel="stylesheet" href="../../styles/utility.css">
+    <link rel="stylesheet" href="../../styles/newRepoComponent.css">
+    <title>New repository</title>
+</head>
+<body>
+    <nav>
+        <div id="app-header" class="flex flex-nowrap item-center pad-16 jus-between">
+            <div id="app-header-groupStart" class="flex item-center gap-8">
+                <!-- Hamburger -->
+                <div class="buttonWithIcon-container">
+                    <button class="app-header-button cursor-pointer">
+                        <img src="../../assets/vectors/hamburger-menu.svg">
+                    </button>
+                </div>
+                <!-- Icon -->
+                <div id="logo-container">
+                    <button id="logo-icon" class="cursor-pointer">
+                        <img src="../../assets/vectors/logo.svg">
+                    </button>
+                </div>
+                <!-- Dashboard Text -->
+                <div class="buttonWithText-container">
+                    <button class="flex item-center jus-center font-semibold font-h5 cursor-pointer app-header-buttonWithText">
+                        Dashboard
+                    </button>
+                </div>
+            </div>
+            <div id="app-header-groupEnd" class="flex item-center gap-8">
+                <!-- Search bar -->
+                <div id="searchButton-container" class="flex item-center gap-4">
+                    <label for="searchButton">
+                        <img src="../../assets/vectors/search-icon.svg">
+                    </label>
+                    <button id="searchButton" class="flex item-center cursor-pointer">
+                        <span class="font-h5">Type <kbd>/</kbd> to search</span>
+                    </button>
+                    <button id="commandPaletteButton" class="app-header-buttonWithText cursor-pointer">
+                        <img src="../../assets/vectors/terminal-icon.svg">
+                    </button>
+                </div>
+                <!-- Create new -->
+                <div class="buttonWithIcon-container" id="createNewButton-container">
+                    <button id="createNewButton" class="app-header-button gap-4 cursor-pointer">
+                        <img src="../../assets/vectors/plus_sign-icon.svg">
+                        <img src="../../assets/vectors/dropdown-icon.svg">
+                    </button>
+                </div>
+                <!-- Issue -->
+                <div class="buttonWithIcon-container" id="issueButton-container">
+                    <button class="app-header-button cursor-pointer">
+                        <img src="../../assets/vectors/issues-icon.svg">
+                    </button>
+                </div>
+                <!-- Pull Request -->
+                <div class="buttonWithIcon-container" id="pullRequestButton-container">
+                    <button class="app-header-button cursor-pointer">
+                        <img src="../../assets/vectors/pull-request-icon.svg">
+                    </button>
+                </div>
+                <!-- Inbox -->
+                <div class="buttonWithIcon-container">
+                    <button class="app-header-button cursor-pointer">
+                        <img src="../../assets/vectors/inbox.svg">
+                    </button>
+                </div>
+                <!-- Profile -->
+                <div id="profile-container" class="flex item-center cursor-pointer">
+                    <img src="../../assets/images/profile-image.jpg">
+                </div>
+            </div>
+        </div>
+    </nav>
+</body>
+</html>

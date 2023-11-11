@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GitHub Dashboard</title>
     <link rel="stylesheet" href="./styles/cssReset.css">
-    <link rel="stylesheet" href="./styles/components.css">
+    <link rel="stylesheet" href="./styles/indexComponent.css">
     <link rel="stylesheet" href="./styles/utility.css">
     <script type="module" src="./scripts/index.js" defer></script>
 </head>
 <body>
-    <header>
+    <nav>
         <div id="app-header" class="flex flex-nowrap item-center pad-16 jus-between">
             <div id="app-header-groupStart" class="flex item-center gap-8">
                 <!-- Hamburger -->
@@ -76,7 +76,7 @@
                 </div>
             </div>
         </div>
-    </header>
+    </nav>
 
     <main>
         <div id="app-main" class="flex flex-nowrap">
@@ -84,7 +84,7 @@
                 <div id="app-sidebar">
                     <div id="app-sidebar-header" class="flex item-center jus-between">
                         <h2 class="font-h5 font-semibold">Top Repositories</h2>
-                        <a href="newRepository.html" id="app-sidebar-header-button" class="flex item-center gap-4">
+                        <a href="./src/pages/newRepository.html" id="app-sidebar-header-button" class="flex item-center gap-4">
                             <img src="./assets/vectors/repository.svg">
                             <span class="font-h6 font-semibold">New</span>
                         </a>
