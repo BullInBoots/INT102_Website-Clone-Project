@@ -20,6 +20,7 @@
   --base-text-weight-normal: 400;
   --base-text-weight-medium: 500;
   --base-text-weight-semibold: 600;
+  --base-text-weight-bold: 700;
   --color-primary: #000408;
   --color-secondary: #0c1116;
   --color-tertiary: rgb(201, 209, 217);
@@ -28,6 +29,15 @@
   --color-linkSecondary: #8b949e;
   --color-textPlaceholder: #5b626c;
   --color-buttonWithTextAndIcon: #21262d;
+
+  --color-blackPrimary: #010409;
+  --color-blackSecondary: #0C1116;
+  --color-blackTertiary: #21262D;
+  --color-textWhite: #C8D1D8;
+  --color-textGray: #8B959F;
+  --color-textBlue: #58a6ff;
+  --color-btnBlue: rgb(31, 111, 235);
+  
   --h00-size: 3rem;
   --h0-size: 2.5rem;
   --h1-size: 2rem;
@@ -165,6 +175,18 @@ button:focus:not(:focus-visible), input[type=text]:focus:not(:focus-visible), a:
 }
 /* Color properties */
 
+.textColor-white {
+  color: var(--color-textWhite);
+}
+
+.textColor-gray {
+  color: var(--color-textGray);
+}
+
+.textColor-blue {
+  color: var(--color-textBlue);
+}
+
 .fill-grey {
   fill: var(--tertiary);
 }
@@ -243,6 +265,10 @@ button:focus:not(:focus-visible), input[type=text]:focus:not(:focus-visible), a:
 
 .font-semibold {
   font-weight: var(--base-text-weight-semibold);
+}
+
+.font-bold {
+  font-weight: var(--base-text-weight-bold);
 }
 
 /* Flow */

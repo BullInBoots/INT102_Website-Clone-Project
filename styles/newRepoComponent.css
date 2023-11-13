@@ -71,3 +71,157 @@
 .app-header-buttonWithText:hover {
     background-color: var(--control-bodyTransparent);
 }
+
+/* FORM PROPERTIES */
+
+#form-container {
+    background-color: var(--color-blackSecondary);
+    padding-top: var(--base-size-40);
+}
+
+form {
+    max-width: 768px;
+    padding: 0 var(--base-size-32);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#form-header-container {
+    padding-bottom: var(--base-size-8);
+    margin-bottom: var(--base-size-8);
+    border-bottom: 1px solid rgb(33, 38, 45);
+}
+
+#form-body-container {
+    margin-top: var(--base-size-8);
+}
+
+#form-body fieldset {
+    border: none;
+}
+
+#repo-owner-button {
+    margin-top: var(--base-size-4);
+    padding: 0 var(--base-size-12);
+    height: var(--base-size-32);
+    min-width: max-content;
+    border: var(--borderWidth-thin) solid var(--borderColor-quarter);
+    border-radius: var(--borderRadius-medium);
+    background-color: var(--color-blackTertiary);
+}
+
+#repo-owner-button #profile-img {
+    margin-right: var(--base-size-8);
+    width: var(--base-size-20);
+    height: var(--base-size-20);
+    border-radius: var(--borderRadius-full);
+}
+
+#slash {
+    margin: 0 var(--base-size-8);
+    margin-top: 21px;
+}
+
+#repo-name-input {
+    padding: 1px var(--base-size-12);
+    margin-top: var(--base-size-8);
+    background-color: var(--color-blackPrimary);
+    border: var(--borderWidth-thin) solid var(--borderColor-quarter);
+    border-radius: var(--borderRadius-medium);
+    min-height: var(--base-size-32);
+}
+
+#repo-name-input:focus {
+    outline: var(--color-textBlue) solid 2px;
+}
+
+#repo-name-suggestion {
+    margin: var(--base-size-8) 0;
+}
+
+#repo-name-suggestion button {
+    background-color: transparent;
+    border: none;
+}
+
+#repo-description {
+    padding-bottom: var(--base-size-16);
+    border-bottom: 1px solid rgb(33, 38, 45);
+}
+
+#repo-description-input {
+    margin-top: var(--base-size-4);
+    width: 100%;
+    padding: 1px var(--base-size-12);
+    background-color: var(--color-blackPrimary);
+    border: var(--borderWidth-thin) solid var(--borderColor-quarter);
+    border-radius: var(--borderRadius-medium);
+    min-width: var(--base-size-32);
+}
+
+#repo-description-input:focus {
+    outline: var(--color-textBlue) solid 2px;
+}
+
+#repo-access {
+    padding-bottom: var(--base-size-8);
+    margin-bottom: var(--base-size-8);
+    border-bottom: 1px solid rgb(33, 38, 45);
+}
+
+#repo-access input[type="radio"] {
+    appearance: none;
+    border: 1px solid var(--borderColor-half);
+    border-radius: var(--borderRadius-full);
+    height: var(--base-size-16);
+    width: var(--base-size-16);
+    transition: border-color 80ms linear;
+}
+
+#repo-access input[type="radio"]:checked {
+    border-color: var(--color-textBlue);
+    border-width: var(--base-size-4);
+
+}
+#public-repo-icon {
+    margin-left: var(--base-size-8);
+}
+
+#repo-access-private {
+    margin-top: var(--base-size-8);
+}
+
+#private-repo-icon {
+    margin-left: var(--base-size-8);
+}
+
+#repo-setup-addReadme {
+    margin-top: var(--base-size-4);
+}
+
+#addReadme-checkbox {
+    appearance: none;
+    width: var(--base-size-16);
+    height: var(--base-size-16);
+    border: var(--borderWidth-thin) solid var(--borderColor-half);
+    border-radius: var(--borderRadius-small);
+}
+
+#addReadme-checkbox:checked {
+    border-color: var(--color-textBlue);
+    background-color: var(--color-textBlue);
+    color: white;
+}
+
+#addReadme-text {
+    margin-left: var(--base-size-8);
+}
+
+#gitignore-button {
+    padding: 0 var(--base-size-8);
+    height: var(--base-size-24);
+    background-color: var(--color-blackTertiary);
+    min-width: max-content;
+    border: var(--borderWidth-thin) solid var(--borderColor-half);
+    border-radius: var(--borderRadius-medium);
+}

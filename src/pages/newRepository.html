@@ -27,7 +27,7 @@
                 <!-- Dashboard Text -->
                 <div class="buttonWithText-container">
                     <button class="flex item-center jus-center font-semibold font-h5 cursor-pointer app-header-buttonWithText">
-                        Dashboard
+                        New repository
                     </button>
                 </div>
             </div>
@@ -76,5 +76,100 @@
             </div>
         </div>
     </nav>
+
+    <main>
+        <div id="form-container">
+            <form>
+                <div id="form-header-container">
+                    <div id="form-header">
+                        <h1 class="font-h2 font-semibold textColor-white">Create a new repository</h1>
+                        <p class="font-h5 textColor-gray">
+                            A repository contains all project files, including the revision history.
+                            Already have a project repository elsewhere?
+                            <a href="#" class="font-h5 textColor-blue">Import a repository.</a>
+                        </p>
+                    </div>
+                </div>
+                <span><i class="font-h5 textColor-white">Required fields are marked with an asterisk (*).</i></span>
+                <div id="form-body-container">
+                    <div id="form-body">
+                        <fieldset>
+                            <div id="repository-owner-name" class="flex">
+                                <div id="repo-owner" class="flex flex-column">
+                                    <label for="repo-owner-button" class="font-h5 textColor-white font-semibold">Owner *</label>
+                                    <button id="repo-owner-button" class="flex item-center jus-between">
+                                        <div class="flex item-center">
+                                            <img src="../../assets/images/profile-image.jpg" id="profile-img">
+                                            <span class="font-h5 font-semibold textColor-white">AccountName</span>
+                                        </div>
+                                        <div>
+                                            <img src="../../assets/vectors/repo-owner-dropdown.svg">
+                                        </div>
+                                    </button>
+                                </div>
+                                <span class="font-h2 font-semibold textColor-white" id="slash">/</span>
+                                <div id="repo-name" class="flex flex-column">
+                                    <label for="repo-name-input" class="font-h5 textColor-white font-semibold">Repository name *</label>
+                                    <input type="text" id="repo-name-input" class="font-h5 textColor-white">
+                                </div>
+                            </div>
+                        </fieldset>
+                        <div id="repo-name-suggestion" class="font-h5 textColor-white">
+                            Great repository names are short and memorable. Need inspiration? How about
+                            <button class="textColor-blue font-semibold">repo-name-suggest</button> ?
+                        </div>
+                        <div id="repo-description" class="flex flex-column">
+                            <label for="repo-description-input" class="font-h5 textColor-white font-semibold">
+                                Description <span class="font-h6 textColor-gray">(optional)</span>
+                            </label>
+                            <input type="text" id="repo-description-input" class="font-h5 textColor-white">
+                        </div>
+                        <div id="repo-access" class="flex flex-column">
+                            <div id="repo-access-public" class="flex item-center gap-8">
+                                <input type="radio" name="repo-access" id="public-repo-radioBtn" checked="checked">
+                                <img src="../../assets/vectors/public-repo.svg" width="24" height="24" id="public-repo-icon">
+                                <div id="public-repo-text" class="flex flex-column">
+                                    <span class="font-h5 textColor-white font-semibold">Public</span>
+                                    <span class="font-h6 textColor-gray">Anyone on the internet can see this repository. You choose who can commit.</span>
+                                </div>
+                            </div>
+                            <div id="repo-access-private" class="flex item-center gap-8">
+                                <input type="radio" name="repo-access" id="private-repo-radioBtn">
+                                <img src="../../assets/vectors/private-repo.svg" width="24" height="24" id="private-repo-icon">
+                                <div id="private-repo-text" class="flex flex-column">
+                                    <span class="font-h5 textColor-white font-semibold">Private</span>
+                                    <span class="font-h6 textColor-gray">You choose who can see and commit to this repository.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="repo-setup" class="flex flex-column">
+                            <div id="repo-setup-header">
+                                <span class="font-h5 textColor-white font-semibold">Initialize this repository with:</span>
+                            </div>
+                            <div id="repo-setup-addReadme" class="flex">
+                                <input type="checkbox" name="addReadme" id="addReadme-checkbox">
+                                <div id="addReadme-text" class="flex flex-column">
+                                    <span class="font-h5 textColor-white font-semibold">
+                                        Add a README file
+                                    </span>
+                                    <span class="font-h6 textColor-gray">
+                                        This is where you can write a long description for your project. <span class="font-h6 textColor-blue">Learn more about READMEs.</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div id="repo-setup-gitignore" class="flex flex-column">
+                                <span class="font-h5 textColor-white font-semibold">Add .gitignore</span>
+                                <button id="gitignore-button" class="flex gap-4">
+                                    <span class="font-h6 textColor-gray">.gitignore template: <span class="font-h6 textColor-white">None</span></span>
+                                    <img src="../../assets/vectors/repo-owner-dropdown.svg">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+    
 </body>
 </html>
