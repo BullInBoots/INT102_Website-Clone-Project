@@ -1,6 +1,6 @@
 console.log("index.js loaded");
 
-const defaultImageSrc = '../assets/images/profile-image.jpg';
+const defaultImageSrc = '../../assets/images/profile-image.jpg';
 const userName = "AccountName";
 const repoName = "RepositoryName";
 const repoList = document.querySelector('#repo-list');
