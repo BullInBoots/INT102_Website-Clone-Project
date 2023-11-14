@@ -157,17 +157,56 @@
                                     </span>
                                 </div>
                             </div>
-                            <div id="repo-setup-gitignore" class="flex flex-column">
-                                <span class="font-h5 textColor-white font-semibold">Add .gitignore</span>
-                                <button id="gitignore-button" class="flex gap-4">
+                            <div id="repo-setup-gitignore" class="flex flex-column item-start">
+                                <label for="git-ignore-button" class="font-h5 textColor-white font-semibold">Add .gitignore</label>
+                                <button id="gitignore-button" class="dropdown-btn flex gap-4 item-center jus-between">
                                     <span class="font-h6 textColor-gray">.gitignore template: <span class="font-h6 textColor-white">None</span></span>
                                     <img src="../../assets/vectors/repo-owner-dropdown.svg">
                                 </button>
+                                <span class="font-h6 textColor-gray">Choose which files not to track from a list of templates. <span class="font-h6 textColor-blue">Learn more about licenses.</span></span>
                             </div>
+                            <div id="repo-setup-license" class="flex flex-column item-start">
+                                <label for="license-button" class="font-h5 textColor-white font-semibold">Choose a license</label>
+                                <button id="license-button" class="dropdown-btn flex gap-4 item-center jus-between">
+                                    <span class="font-h6 textColor-gray">License: <span class="font-h6 textColor-white">None</span></span>
+                                    <img src="../../assets/vectors/repo-owner-dropdown.svg">
+                                </button>
+                                <span class="font-h6 textColor-gray">A license tells others what they can and can't do with your code. <span class="font-h6 textColor-blue">Learn more about licenses.</span></span>
+                            </div>
+                        </div>
+                        <div id="repo-result" class="flex item-center">
+                            <img src="../../assets/vectors/information.svg" id="information-icon">
+                            <span class="font-h5 textColor-gray">You are creating a public repository in your personal account.</span>
+                        </div>
+                        <div id="repo-submit" class="flex flex-column">
+                            <button id="repo-submit-button" class="self-end font-h5 font-semibold">Create repository</button>
                         </div>
                     </div>
                 </div>
             </form>
+            <footer>
+                <div id="footer-container" class="flex item-center">
+                    <div id="footer-logo" class="flex item-center gap-8">
+                        <img src="../../assets/vectors/footer-logo.svg">
+                        <span class="font-h6 textColor-gray">&copy; 2023 Github, Inc.</span>
+                    </div>
+                    <div id="footer-content" class="flex item-center">
+                        <ul class="flex flex-wrap item-center jus-between">
+                            <li><a href="#" class="font-h6 textColor-blue">Terms</a></li>
+                            <li><a href="#" class="font-h6 textColor-blue">Privacy</a></li>
+                            <li><a href="#" class="font-h6 textColor-blue">Security</a></li>
+                            <li><a href="#" class="font-h6 textColor-blue">Status</a></li>
+                            <li><a href="#" class="font-h6 textColor-blue">Docs</a></li>
+                            <li><a href="#" class="font-h6 textColor-blue">Contact Github</a></li>
+                            <li><a href="#" class="font-h6 textColor-blue">Pricing</a></li>
+                            <li><a href="#" class="font-h6 textColor-blue">API</a></li>
+                            <li><a href="#" class="font-h6 textColor-blue">Training</a></li>
+                            <li><a href="#" class="font-h6 textColor-blue">Blog</a></li>
+                            <li><a href="#" class="font-h6 textColor-blue">About</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
         </div>
     </main>
     

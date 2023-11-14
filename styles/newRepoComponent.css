@@ -124,7 +124,8 @@ form {
 
 #repo-name-input {
     padding: 1px var(--base-size-12);
-    margin-top: var(--base-size-8);
+    margin-top: var(--base-size-4);
+    width: 100%;
     background-color: var(--color-blackPrimary);
     border: var(--borderWidth-thin) solid var(--borderColor-quarter);
     border-radius: var(--borderRadius-medium);
@@ -195,8 +196,13 @@ form {
     margin-left: var(--base-size-8);
 }
 
+#repo-setup {
+    border-bottom: 1px solid rgb(33, 38, 45);
+}
+
 #repo-setup-addReadme {
     margin-top: var(--base-size-4);
+    margin-bottom: var(--base-size-16);
 }
 
 #addReadme-checkbox {
@@ -217,11 +223,124 @@ form {
     margin-left: var(--base-size-8);
 }
 
-#gitignore-button {
+#repo-setup-gitignore {
+    margin-bottom: var(--base-size-16);
+}
+
+#repo-setup-license {
+    margin-bottom: var(--base-size-16);
+}
+
+#repo-setup .dropdown-btn {
+    margin: var(--base-size-8) 0;
     padding: 0 var(--base-size-8);
-    height: var(--base-size-24);
+    height: var(--base-size-28);
     background-color: var(--color-blackTertiary);
-    min-width: max-content;
-    border: var(--borderWidth-thin) solid var(--borderColor-half);
+    min-width: fit-content;
+    border: var(--borderWidth-thin) solid var(--borderColor-quarter);
     border-radius: var(--borderRadius-medium);
+}
+
+#repo-result {
+    padding: var(--base-size-16) 0;
+    border-bottom: 1px solid rgb(33, 38, 45);
+}
+
+#information-icon {
+    margin: 0 var(--base-size-4);
+}
+
+#repo-submit-button {
+    padding: 0 var(--base-size-12);
+    margin-top: var(--base-size-16);
+    min-width: max-content;
+    height: var(--base-size-32);
+    background-color: var(--color-btnBlue);
+    color: white;
+    border: none;
+    border-radius: var(--borderRadius-medium);
+}
+
+footer {
+    max-width: 1012px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--base-size-16);
+    padding-right: var(--base-size-16);
+    padding-bottom: var(--base-size-40);
+}
+
+#footer-container {
+    margin-top: var(--base-size-40);
+    padding-top: var(--base-size-40);
+    padding-bottom: var(--base-size-8);
+}
+
+#footer-logo {
+    width: 16%;
+}
+
+#footer-content {
+    width: 66%;
+}
+
+#footer-content ul {
+    width: 100%;
+    list-style-type: none;
+}
+
+#footer-content li {
+    display: flex;
+    align-items: center;
+}
+
+#footer-content ul li a {
+    text-decoration: none;
+}
+
+#footer-content ul li a:hover {
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 768px) {
+    #searchButton, #commandPaletteButton {
+        display: none;
+    }
+    #footer-container {
+        flex-direction: column;
+    }
+    #footer-logo {
+        width: fit-content;
+        order: 1;
+        margin-top: var(--base-size-8);
+    }
+}
+
+@media only screen and (max-width: 426px) {
+    #form-container {
+        background-color: #161b22;
+    }
+    form {
+        padding-left: var(--base-size-16);
+        padding-right: var(--base-size-16);
+    }
+    #createNewButton-container {
+        display: none;
+    }
+    #issueButton-container {
+        display: none;
+    }
+    #pullRequestButton-container {
+        display: none;
+    }
+    #footer-content {
+        width: 100% !important;
+    }
+    #footer-content ul {
+        flex-wrap: wrap;
+        justify-content: center !important;
+    }
+    #footer-content ul li {
+        margin-right: 16px;
+    }
 }
