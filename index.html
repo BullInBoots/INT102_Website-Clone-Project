@@ -22,7 +22,9 @@
                 <!-- Icon -->
                 <div id="logo-container">
                     <button id="logo-icon" class="cursor-pointer">
-                        <img src="./assets/vectors/logo.svg">
+                        <a href="./index.html">
+                            <img src="./assets/vectors/logo.svg">
+                        </a>
                     </button>
                 </div>
                 <!-- Dashboard Text -->
@@ -80,26 +82,30 @@
 
     <main>
         <div id="app-main" class="flex flex-nowrap">
+            <h2 id="hiddenHeader" class="font-h4 textColor-white font-semibold">Repositories</h2>
             <div id="app-sidebar-container">
                 <div id="app-sidebar">
-                    <div id="app-sidebar-header" class="flex item-center jus-between">
-                        <h2 class="font-h5 font-semibold">Top Repositories</h2>
-                        <a href="./src/pages/newRepository.html" id="app-sidebar-header-button" class="flex item-center gap-4">
-                            <img src="./assets/vectors/repository.svg">
-                            <span class="font-h6 font-semibold">New</span>
-                        </a>
-                    </div>
-                    <div id="app-sidebar-search">
-                        <input type="text" id="app-sidebar-searchInput" placeholder="Find a repository.." class="font-h5">
-                    </div>
-                    <div id="app-sidebar-repository">
-                        <ul id="repo-list">
-                            <!-- this space is filled with fragment from index.js -->
-                        </ul>
-                        <div id="repo-showMore" class="flex item-center">
-                            <button id="showMore-button" class="font-h6">Show more</button>
+                    <div id="app-sidebar-main">
+                        <div id="app-sidebar-header" class="flex item-center jus-between">
+                            <h2 class="font-h5 font-semibold">Top Repositories</h2>
+                            <a href="./src/pages/newRepository.html" id="app-sidebar-header-button" class="flex item-center gap-4">
+                                <img src="./assets/vectors/repository.svg">
+                                <span class="font-h6 font-semibold">New</span>
+                            </a>
+                        </div>
+                        <div id="app-sidebar-search">
+                            <input type="text" id="app-sidebar-searchInput" placeholder="Find a repository.." class="font-h5">
+                        </div>
+                        <div id="app-sidebar-repository">
+                            <ul id="repo-list">
+                                <!-- this space is filled with fragment from index.js -->
+                            </ul>
+                            <div id="repo-showMore" class="flex item-center">
+                                <button id="showMore-button" class="font-h6">Show more</button>
+                            </div>
                         </div>
                     </div>
+                    <div id="app-sidebar-hiddenHeader" class="font-h4 textColor-white font-semibold">Recent activity</div>
                     <div id="app-sidebar-footer">
                         <h5 class="font-h5">Recent activity</h5>
                         <div class="recent-activity-container flex item-center gap-8">
