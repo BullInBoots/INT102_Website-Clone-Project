@@ -404,6 +404,7 @@
 #app-content-right {
     flex: 1 0 auto;
     max-width: 315px;
+    margin-bottom: 256px; /* making some blank space to push footer to bottom */
 }
 
 #latest-change-container {
