@@ -180,6 +180,8 @@ form {
     border-radius: var(--borderRadius-full);
     height: var(--base-size-16);
     width: var(--base-size-16);
+    min-height: var(--base-size-16);
+    min-width: var(--base-size-16);
     transition: border-color 80ms linear;
 }
 
