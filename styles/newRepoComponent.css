@@ -1,3 +1,7 @@
+body {
+    background-color: var(--color-blackSecondary);
+}
+
 #app-header {
     background-color: var(--color-primary);
     box-shadow: inset 0 calc(var(--borderWidth-thin) * -1) var(--borderColor-quarter);
@@ -74,8 +78,8 @@
 
 /* FORM PROPERTIES */
 
+
 #form-container {
-    background-color: var(--color-blackSecondary);
     padding-top: var(--base-size-40);
 }
 
@@ -153,7 +157,7 @@ form {
 #repo-description-input {
     margin-top: var(--base-size-4);
     width: 100%;
-    padding: 1px var(--base-size-12);
+    padding: var(--base-size-4) var(--base-size-12);
     background-color: var(--color-blackPrimary);
     border: var(--borderWidth-thin) solid var(--borderColor-quarter);
     border-radius: var(--borderRadius-medium);
@@ -302,7 +306,7 @@ footer {
     text-decoration: underline;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 769px) {
     #searchButton, #commandPaletteButton {
         display: none;
     }
@@ -317,7 +321,7 @@ footer {
 }
 
 @media only screen and (max-width: 426px) {
-    #form-container {
+    body {
         background-color: #161b22;
     }
     form {

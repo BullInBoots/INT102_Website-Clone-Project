@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account</title>
+    <link rel="stylesheet" href="../../styles/cssReset.css">
+    <link rel="stylesheet" href="../../styles/utility.css">
+    <link rel="stylesheet" href="../../styles/account.css">
+</head>
+<body>
+    <nav>
+        <div id="app-header" class="flex flex-nowrap item-center pad-16 jus-between">
+            <div id="app-header-groupStart" class="flex item-center gap-8">
+                
+                <div class="buttonWithIcon-container">
+                    <button class="app-header-button cursor-pointer">
+                        <img src="../../assets/vectors/hamburger-menu.svg">
+                    </button>
+                </div>
+                
+                <div id="logo-container">
+                    <button id="logo-icon" class="cursor-pointer">
+                        <a href="../../index.html">
+                            <img src="../../assets/vectors/logo.svg">
+                        </a>
+                    </button>
+                </div>
+                
+                <div class="buttonWithText-container">
+                    <button class="flex item-center jus-center font-semibold font-h5 cursor-pointer app-header-buttonWithText">
+                        AccountName
+                    </button>
+                </div>
+            </div>
+            <div id="app-header-groupEnd" class="flex item-center gap-8">
+                
+                <div id="searchButton-container" class="flex item-center gap-4">
+                    <label for="searchButton">
+                        <img src="../../assets/vectors/search-icon.svg">
+                    </label>
+                    <button id="searchButton" class="flex item-center cursor-pointer">
+                        <span class="font-h5">Type <kbd>/</kbd> to search</span>
+                    </button>
+                    <button id="commandPaletteButton" class="app-header-buttonWithText cursor-pointer">
+                        <img src="../../assets/vectors/terminal-icon.svg">
+                    </button>
+                </div>
+                
+                <div class="buttonWithIcon-container" id="createNewButton-container">
+                    <button id="createNewButton" class="app-header-button gap-4 cursor-pointer">
+                        <img src="../../assets/vectors/plus_sign-icon.svg">
+                        <img src="../../assets/vectors/dropdown-icon.svg">
+                    </button>
+                </div>
+
+                <div class="buttonWithIcon-container" id="issueButton-container">
+                    <button class="app-header-button cursor-pointer">
+                        <img src="../../assets/vectors/issues-icon.svg">
+                    </button>
+                </div>
+                
+                <div class="buttonWithIcon-container" id="pullRequestButton-container">
+                    <button class="app-header-button cursor-pointer">
+                        <img src="../../assets/vectors/pull-request-icon.svg">
+                    </button>
+                </div>
+                
+                <div class="buttonWithIcon-container">
+                    <button class="app-header-button cursor-pointer">
+                        <img src="../../assets/vectors/inbox.svg">
+                    </button>
+                </div>
+                
+                <a href="./account.html" id="profile-container" class="flex item-center cursor-pointer">
+                    <img src="../../assets/images/profile-image.jpg">
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+
+
+        <div id="sub-navbar-container" class="flex item-center">
+            <div id="sub-navbar" class="flex item-center">
+                <div id="overview-btn" class="sub-navbar-btn-container active">
+                    <div class="sub-navbar-btn">
+                        <img src="../../assets/vectors/account-overview.svg">
+                        <span class="font-h5 textColor-white font-semibold">Overview</span>
+                    </div>
+                </div>
+                <div id="repository-btn" class="sub-navbar-btn-container">
+                    <div class="sub-navbar-btn">
+                        <img src="../../assets/vectors/account-repository.svg">
+                        <span class="font-h5 textColor-white">Repositories</span>
+                    </div>
+                </div>
+                <div id="project-btn" class="sub-navbar-btn-container">
+                    <div class="sub-navbar-btn">
+                        <img src="../../assets/vectors/account-project.svg">
+                        <span class="font-h5 textColor-white">Projects</span>
+                    </div>
+                </div>
+                <div id="package-btn" class="sub-navbar-btn-container">
+                    <div class="sub-navbar-btn">
+                        <img src="../../assets/vectors/account-package.svg">
+                        <span class="font-h5 textColor-white">Packages</span>
+                    </div>
+                </div>
+                <div id="star-btn" class="sub-navbar-btn-container">
+                    <div class="sub-navbar-btn">
+                        <img src="../../assets/vectors/account-star.svg">
+                        <span class="font-h5 textColor-white">Stars</span>
+                    </div>
+                </div>
+                <div id="dango-btn">
+                    <img src="../../assets/vectors/account-dango.svg">
+                </div>
+            </div>
+        </div>
+
+
+        <div id="account-content-container">
+            <div id="account-content" class="flex jus-between">
+                
+                <div id="account-sidebar" class="flex flex-column">
+                    <div id="profile-container" class="flex flex-column">
+                        <div id="profile-info-container">
+                            <div id="profile-main">
+                                <div id="profile-img-container">
+                                    <img src="../../assets/images/profile-image.jpg">
+                                </div>
+                                <div id="profile-name">
+                                    <h2 class="font-h2 textColor-white">John Doe</h2>
+                                    <span class="font-h3 textColor-gray font-light">AccountName</span>
+                                </div>
+                            </div>
+                            <div class="font-h4 textColor-white">John Doe</div>
+                            <button id="edit-profile-btn" class="font-h5 textColor-white font-semibold">
+                                Edit Profile
+                            </button>
+                            <div id="profile-location" class="flex item-center gap-8">
+                                <img src="../../assets/vectors/account-location.svg">
+                                <span class="font-h5 textColor-white">Thailand, Bangkok</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="profile-achievement">
+                        <div id="profile-achievement-header" class="font-h4 textColor-white font-semibold">Achievements</div>
+                        <div id="profile-badge" class="flex">
+                            <img src="../../assets/images/yolo-default.png" width="64" height="64">
+                        </div>
+                        <div id="profile-feedback">
+                            <span class="font-h6 textColor-blue ">Beta</span>
+                            <a href="#" class="font-h6 textColor-blue">Send feedback</a>
+                        </div>
+                    </div>
+                    <div id="profile-highlight">
+                        <div id="profile-highlight-header" class="font-h4 textColor-white font-semibold">Highlights</div>
+                        <div class="flex item-center gap-4">
+                            <img src="../../assets/vectors/star.svg">
+                            <span class="font-h6 font-semibold">PRO</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="account-main" class="flex flex-column">
+
+                    <div id="profile-readme-container">
+                        <div id="readme-file" class="flex item-center jus-between">
+                            <span class="font-h6 textColor-white">AccountName/README.md</span>
+                            <img src="../../assets/vectors/account-edit-pencil.svg">
+                        </div>
+                        <div id="readme-content" class="font-h4 textColor-blue font-semibold">
+                            Hi there 👋
+                        </div>
+                    </div>
+
+                    <div id="profile-pin-repo-container">
+                        <div id="pin-repo-header" class="flex item-center jus-between">
+                            <span class="font-h4 textColor-white">Pinned</span>
+                            <span class="font-h6 textColor-blue">Customize your pins</span>
+                        </div>
+                        <ul id="pin-repoList" class="flex flex-wrap">
+                            <li class="pin-repoListItem-container">
+                                <div class="item">
+                                    <div class="item-header">
+                                        <div class="groupStart">
+                                            <img src="../../assets/vectors/account-repository.svg">
+                                            <span class="font-h5 textColor-blue font-semibold">Repository-name</span>
+                                            <span class="repo-access-tag">Public</span>
+                                        </div>
+                                        <div class="groupEnd">
+                                            <img src="../../assets/vectors/account-chocolate.icon.svg">
+                                        </div>
+                                    </div>
+                                    <div class="item-content">
+                                        <div class="repo-language flex item-center gap-4">
+                                            <div class="language-color"></div>
+                                            <div class="font-h6 textColor-gray">Programming Language</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="pin-repoListItem-container">
+                                <div class="item">
+                                    <div class="item-header">
+                                        <div class="groupStart">
+                                            <img src="../../assets/vectors/account-repository.svg">
+                                            <span class="font-h5 textColor-blue font-semibold">Repository-name</span>
+                                            <span class="repo-access-tag">Public</span>
+                                        </div>
+                                        <div class="groupEnd">
+                                            <img src="../../assets/vectors/account-chocolate.icon.svg">
+                                        </div>
+                                    </div>
+                                    <div class="item-content">
+                                        <div class="repo-language flex item-center gap-4">
+                                            <div class="language-color"></div>
+                                            <div class="font-h6 textColor-gray">Programming Language</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="pin-repoListItem-container">
+                                <div class="item">
+                                    <div class="item-header">
+                                        <div class="groupStart">
+                                            <img src="../../assets/vectors/account-repository.svg">
+                                            <span class="font-h5 textColor-blue font-semibold">Repository-name</span>
+                                            <span class="repo-access-tag">Public</span>
+                                        </div>
+                                        <div class="groupEnd">
+                                            <img src="../../assets/vectors/account-chocolate.icon.svg">
+                                        </div>
+                                    </div>
+                                    <div class="item-content">
+                                        <div class="repo-language flex item-center gap-4">
+                                            <div class="language-color"></div>
+                                            <div class="font-h6 textColor-gray">Programming Language</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div id="profile-contribution-container" class="flex">
+                        <div id="profile-contribution-content">
+                            <div id="profile-contribution-header" class="flex item-center jus-between">
+                                <div class="font-h4 textColor-white">Many contribution in the last year</div>
+                                <div class="flex item-center">
+                                    <span class="font-h6 textColor-gray">Contribution settings</span>
+                                    <img src="../../assets/vectors/dropdown-icon.svg">
+                                </div>
+                            </div>
+                            <div id="profile-contribution-graph">
+                                <div id="graph-container">
+                                    <table id="graph-table">
+                                        <thead>
+                                            <tr id="graph-label">
+                                                <td style="width: 28px;"></td>
+                                                <th colspan="3">Nov</th>
+                                                <th colspan="4">Dec</th>
+                                                <th colspan="5">Jan</th>
+                                                <th colspan="4">Feb</th>
+                                                <th colspan="4">Mar</th>
+                                                <th colspan="5">Apr</th>
+                                                <th colspan="4">May</th>
+                                                <th colspan="4">Jun</th>
+                                                <th colspan="5">Jul</th>
+                                                <th colspan="4">Aug</th>
+                                                <th colspan="4">Sep</th>
+                                                <th colspan="5">Oct</th>
+                                                <th colspan="2">Nov</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="graph-content">
+                                            <script src="../scripts/createContributionTable.js"></script>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div id="graph-footer" class="flex jus-between">
+                                    <span class="font-h6 textColor-gray">Learn how we count contributions</span>
+                                    <span class="font-h6 textColor-gray">*in development*</span>
+                                </div>
+                            </div>
+
+                            <div id="profile-contribution-activity-container">
+                                <div id="contribution-activity-header" class="font-h4 textColor-white">
+                                    Contribution activity
+                                </div>
+                                <div id="contribution-activity-content">
+                                    <div id="contribution-activity-header" class="flex item-center">
+                                        <div id="month-label" class="font-h6 textColor-white font-semibold flex flex-nowrap gap-4">November <span class="font-h6 textColor-gray">2023</span></div>
+                                        <div id="line-break"></div>
+                                    </div>
+                                    <div id="contribution-activity-list">
+                                        
+                                        <div class="activity-listItem-container">
+                                            <div class="icon-container flex item-center jus-between">
+                                                <img src="../../assets/vectors/account-repository.svg">
+                                            </div>
+                                            <div class="activity flex flex-column">
+                                                <div class="activity-header flex item-center jus-between">
+                                                    <span class="font-h4 textColor-white">Created 128 commits in 1 repository</span>
+                                                    <img src="../../assets/vectors/minimize-activity.svg">
+                                                </div>
+                                                <div class="activity-action flex">
+                                                    <div class="font-h5 textColor-blue">
+                                                        AccountName/Repo-Name
+                                                        <span class="font-h6 textColor-gray">
+                                                            12 commits
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="activity-action flex">
+                                                    <div class="font-h5 textColor-blue">
+                                                        AccountName/Repo-Name
+                                                        <span class="font-h6 textColor-gray">
+                                                            65 commits
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="activity-action flex">
+                                                    <div class="font-h5 textColor-blue">
+                                                        AccountName/Repo-Name
+                                                        <span class="font-h6 textColor-gray">
+                                                            51 commits
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="activity-listItem-container">
+                                            <div class="icon-container flex item-center jus-between">
+                                                <img src="../../assets/vectors/account-repository.svg">
+                                            </div>
+                                            <div class="activity flex flex-column">
+                                                <div class="activity-header flex item-center jus-between">
+                                                    <span class="font-h4 textColor-white">Created 128 commits in 1 repository</span>
+                                                    <img src="../../assets/vectors/minimize-activity.svg">
+                                                </div>
+                                                <div class="activity-action flex">
+                                                    <div class="font-h5 textColor-blue">
+                                                        AccountName/Repo-Name
+                                                        <span class="font-h6 textColor-gray">
+                                                            12 commits
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="activity-action flex">
+                                                    <div class="font-h5 textColor-blue">
+                                                        AccountName/Repo-Name
+                                                        <span class="font-h6 textColor-gray">
+                                                            65 commits
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="activity-action flex">
+                                                    <div class="font-h5 textColor-blue">
+                                                        AccountName/Repo-Name
+                                                        <span class="font-h6 textColor-gray">
+                                                            51 commits
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="activity-listItem-container">
+                                            <div class="icon-container flex item-center jus-between">
+                                                <img src="../../assets/vectors/account-repository.svg">
+                                            </div>
+                                            <div class="activity flex flex-column">
+                                                <div class="activity-header flex item-center jus-between">
+                                                    <span class="font-h4 textColor-white">Created 128 commits in 1 repository</span>
+                                                    <img src="../../assets/vectors/minimize-activity.svg">
+                                                </div>
+                                                <div class="activity-action flex">
+                                                    <div class="font-h5 textColor-blue">
+                                                        AccountName/Repo-Name
+                                                        <span class="font-h6 textColor-gray">
+                                                            12 commits
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="activity-action flex">
+                                                    <div class="font-h5 textColor-blue">
+                                                        AccountName/Repo-Name
+                                                        <span class="font-h6 textColor-gray">
+                                                            65 commits
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="activity-action flex">
+                                                    <div class="font-h5 textColor-blue">
+                                                        AccountName/Repo-Name
+                                                        <span class="font-h6 textColor-gray">
+                                                            51 commits
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <button id="showmore-btn" class="font-h6 textColor-blue font-semibold">Show more activity</button>
+                                        <div id="profile-guide" class="font-h6 textColor-gray">Seeing something unexpected? Take a look at the <span class="font-h6 textColor-blue">Github profile guide.</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="sidebar">
+                            <div class="year-btn active">2023</div>
+                            <div class="year-btn">2022</div>
+                            <div class="year-btn">2021</div>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div id="footer-container" class="flex item-center">
+            <div id="footer-logo" class="flex item-center gap-8">
+                <img src="../../assets/vectors/footer-logo.svg">
+                <span class="font-h6 textColor-gray">&copy; 2023 Github, Inc.</span>
+            </div>
+            <div id="footer-content" class="flex item-center">
+                <ul class="flex flex-wrap item-center jus-between">
+                    <li><a href="#" class="font-h6 textColor-blue">Terms</a></li>
+                    <li><a href="#" class="font-h6 textColor-blue">Privacy</a></li>
+                    <li><a href="#" class="font-h6 textColor-blue">Security</a></li>
+                    <li><a href="#" class="font-h6 textColor-blue">Status</a></li>
+                    <li><a href="#" class="font-h6 textColor-blue">Docs</a></li>
+                    <li><a href="#" class="font-h6 textColor-blue">Contact Github</a></li>
+                    <li><a href="#" class="font-h6 textColor-blue">Pricing</a></li>
+                    <li><a href="#" class="font-h6 textColor-blue">API</a></li>
+                    <li><a href="#" class="font-h6 textColor-blue">Training</a></li>
+                    <li><a href="#" class="font-h6 textColor-blue">Blog</a></li>
+                    <li><a href="#" class="font-h6 textColor-blue">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
