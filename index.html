@@ -102,7 +102,7 @@
                                 <!-- this space is filled with fragment from index.js -->
                             </ul>
                             <div id="repo-showMore" class="flex item-center">
-                                <button id="showMore-button" class="font-h6">Show more</button>
+                                <button id="showMore-button" class="font-h6 cursor-pointer">Show more</button>
                             </div>
                         </div>
                     </div>
@@ -123,7 +123,7 @@
                 </div>
             </div>
             <div id="app-content">
-                <div id="app-content-container" class="flex flex-nowrap gap-24">
+                <div id="app-content-container" class="flex flex-nowrap jus-between gap-24">
                     <div id="app-content-left" class="flex flex-column gap-8">
                         <div class="flex flex-nowrap jus-between item-center" id="app-content-left-header">
                             <div class="groupStart">
@@ -155,7 +155,7 @@
                                     <div class="trend-repo-description">
                                         <div class="repo-name">
                                             <div class="user-img"></div>
-                                            <span class="user-info">RepoName/AccountName</span>
+                                            <span class="user-info cursor-pointer">RepoName/AccountName</span>
                                         </div>
                                         <div class="repo-description">
                                             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero, quae?
@@ -171,7 +171,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="star-button-container">
+                                    <div class="star-button-container cursor-pointer">
                                         <div class="star-button">
                                             <img src="./assets/vectors/star.svg">
                                             <span class="star">Star</span>
@@ -186,7 +186,7 @@
                                     <div class="trend-repo-description">
                                         <div class="repo-name">
                                             <div class="user-img"></div>
-                                            <span class="user-info">RepoName/AccountName</span>
+                                            <span class="user-info cursor-pointer">RepoName/AccountName</span>
                                         </div>
                                         <div class="repo-description">
                                             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero, quae?
@@ -202,7 +202,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="star-button-container">
+                                    <div class="star-button-container cursor-pointer">
                                         <div class="star-button">
                                             <img src="./assets/vectors/star.svg">
                                             <span class="star">Star</span>
@@ -240,26 +240,30 @@
                             </ul>
                         </div>
                     </div>
+
+
+
                     <div id="app-content-right">
+
                        <div id="latest-change-container">
-                            <h5 class="font-h5 font-semibold" id="latest-change-text-header">Latest changes</h5>
+                            <h5 class="font-h5 font-semibold textColor-white" id="latest-change-text-header">Latest changes</h5>
                             <div id="latest-change">
                                 <ul id="latest-change-list">
                                     <li class="latest-change-listItem">
                                         <span class="hours-ago font-h6">20 hours ago</span>
-                                        <span class="change-topic font-h5">GitHub Copilot in the CLI now in public beta</span>
+                                        <span class="change-topic font-h5 cursor-pointer">GitHub Copilot in the CLI now in public beta</span>
                                     </li>
                                     <li class="latest-change-listItem">
                                         <span class="hours-ago font-h6">20 hours ago</span>
-                                        <span class="change-topic font-h5">GitHub Copilot in the CLI now in public beta</span>
+                                        <span class="change-topic font-h5 cursor-pointer">GitHub Copilot in the CLI now in public beta</span>
                                     </li>
                                     <li class="latest-change-listItem">
                                         <span class="hours-ago font-h6">20 hours ago</span>
-                                        <span class="change-topic font-h5">GitHub Copilot in the CLI now in public beta</span>
+                                        <span class="change-topic font-h5 cursor-pointer">GitHub Copilot in the CLI now in public beta</span>
                                     </li>
                                     <li class="latest-change-listItem">
                                         <span class="hours-ago font-h6">20 hours ago</span>
-                                        <span class="change-topic font-h5">GitHub Copilot in the CLI now in public beta</span>
+                                        <span class="change-topic font-h5 cursor-pointer">GitHub Copilot in the CLI now in public beta</span>
                                     </li>
                                     <li class="latest-change-listItem">
                                         <a href="#" class="font-h6" id="changelog">View changelog</a>
@@ -267,6 +271,43 @@
                                 </ul>
                             </div>
                        </div>
+
+                       <div id="explore-repo-container">
+                            <h3 class="font-h5 font-semibold textColor-white" id="explore-repo-header">Explore repositories</>
+                            <div id="explore-repo">
+                                <ul id="explore-repo-list" class="flex flex-column">
+                                    <li class="explore-repo-listItem">
+                                        <div class="flex item-center jus-between">
+                                            <div class="flex item-center gap-4">
+                                                <div class="explore-repo-profile"></div>
+                                                <div class="explore-repo-profile-info cursor-pointer">
+                                                    <span class="font-h5 textColor-white font-semibold">AccountName</span>
+                                                    <span class="font-h5 textColor-gray">/</span>
+                                                    <span class="font-h5 textColor-white font-semibold">RepoName</span>
+                                                </div>
+                                            </div>
+                                            <button class="star-btn cursor-pointer">
+                                                <img src="./assets/vectors/account-star.svg">
+                                            </button>
+                                        </div>
+                                        <div class="explore-repo-description font-h6 textColor-gray font-normal">
+                                            Next generation frontend tooling. It's fast!
+                                        </div>
+                                        <div class="explore-repo-sub-desc flex item-center">
+                                            <div class="explore-star-count flex item-center gap-4">
+                                                <img src="./assets/vectors/account-star.svg">
+                                                <span class="font-h6 textColor-gray font-normal">12.3k</span>
+                                            </div>
+                                            <div class="explore-language flex item-center gap-4">
+                                                <div class="programLanguageColor"></div>
+                                                <div class="font-h6 textColor-gray font-normal">Programming Language</div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                       </div>
+
                     </div>
                 </div>
             </div>

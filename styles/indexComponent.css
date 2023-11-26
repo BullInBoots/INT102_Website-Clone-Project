@@ -78,6 +78,7 @@
 }
 
 #app-main #hiddenHeader {
+    text-decoration: none;
     display: none;
 }
 
@@ -191,15 +192,12 @@
 }
 
 #app-content-container {
-    max-width: calc(995px + 256px + 48px);
     margin-top: var(--base-size-16);
     padding: 0 var(--base-size-24);
 }
 
 #app-content-left {
-    max-width: 680px;
-    width: 100%;
-    flex: auto;
+    flex: 1 1 auto;
     color: var(--color-tertiary);
 }
 
@@ -271,6 +269,11 @@
 
 .user-info {
     font-size: 14px;
+}
+
+.user-info:hover {
+    color: var(--color-textBlue);
+    text-decoration: underline;
 }
 
 .repo-description {
@@ -416,7 +419,6 @@
 
 #latest-change-text-header {
     margin-bottom: var(--base-size-16);
-    color: var(--color-tertiary);
 }
 
 .latest-change-listItem {
@@ -434,12 +436,66 @@
     color: var(--color-linkSecondary);
 }
 
+#changelog:hover {
+    color: var(--color-textBlue);
+}
+
 .hours-ago {
     color: var(--color-linkSecondary);
 }
 
 .change-topic {
     color: var(--color-tertiary);
+}
+
+.change-topic:hover {
+    color: var(--color-textBlue);
+    text-decoration: underline;
+}
+
+#explore-repo-container {
+    margin-top: var(--base-size-16);
+    padding: var(--base-size-16);
+    background-color: var(--color-secondary);
+    border: var(--borderWidth-thin) solid var(--borderColor-penny);
+    border-radius: var(--borderRadius-medium);
+}
+
+#explore-repo-list {
+    padding: var(--base-size-16) 0;
+    list-style-type: none;
+}
+
+.star-btn {
+    padding: 3px var(--base-size-12);
+    background-color: var(--color-blackTertiary);
+    border: var(--borderWidth-thin) solid var(--borderColor-penny);
+    border-radius: var(--borderRadius-medium);
+}
+
+.explore-repo-profile {
+    width: var(--base-size-20);
+    height: var(--base-size-20);
+    border-radius: var(--borderRadius-full);
+    background-color: white;
+}
+
+.explore-repo-profile-info:hover {
+    text-decoration: underline;
+}
+
+.explore-language {
+    margin-top: var(--base-size-4);
+}
+
+.explore-repo-description {
+    margin-top: var(--base-size-8);
+    margin-bottom: 10px;
+}
+
+.explore-star-count {
+    margin-top: var(--base-size-4);
+    margin-right: var(--base-size-24);
 }
 
 /* MEDIA CONTROL */
@@ -473,7 +529,7 @@
     }
     #app-content-left {
         max-width: none;
-        flex: 1 0 auto;
+        flex: 1 1 auto;
     }
     #footer-logo {
         display: none;
@@ -493,6 +549,9 @@
     }
     #app-main #hiddenHeader {
         display: block;
+    }
+    #app-content-left {
+        flex: 0 1 auto;
     }
     #app-sidebar-container {
         background-color: transparent;

@@ -211,6 +211,7 @@ body {
 }
 
 #account-main {
+    flex: auto;
     min-width: 0;
     margin-left: var(--base-size-32);
 }
@@ -292,6 +293,7 @@ body {
 }
 
 #profile-contribution-content {
+    max-width: 1000px;
     width: 83.3%;
 }
 
