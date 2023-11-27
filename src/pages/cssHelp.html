@@ -11,18 +11,31 @@
         <div class="content-container">
 
             <div class="content">
-                <div class="content-header">::after, ::before puesdo class</div>
-
-                <div class="content-description">
-                    
-                </div>
-            </div>
-
-            <div class="content">
                 <div class="content-header">overflow-wrap property</div>
 
                 <div class="content-description">
-                    
+                    specifies whether or not the browser can break lines with long words, if they overflow the container.
+                </div>
+                
+                <div class="content-example" id="overflowWrap">
+                    <div class="before">
+                        <pre>
+                            <b>before (overflow-wrap: normal)</b>
+
+                            Lorem ipsum dolor sit amet consectetur.
+                        </pre>
+                    </div>
+                    <br>
+                    <div class="after">
+                        <pre>
+                            <b>after (overflow-wrap: break-word)</b>
+                            
+                            Lorem ipsum
+                            dolor sit
+                            amet
+                            consectetur
+                        </pre>
+                    </div>
                 </div>
             </div>
 
@@ -30,7 +43,14 @@
                 <div class="content-header">appearance property</div>
 
                 <div class="content-description">
-                    
+                    used to control the appearance of form controls
+                </div>
+                
+                <div class="content-example">
+                    <p><b>before (appearance: auto)</b></p>
+                    <input type="text" placeholder="type something" style="margin: 8px 0;">
+                    <p><b>after (appearance: none)</b></p>
+                    <input type="text" style="appearance: none;">
                 </div>
             </div>
 
@@ -38,7 +58,15 @@
                 <div class="content-header">attribute selector</div>
 
                 <div class="content-description">
-                    
+                    used to select elements with a specified attribute
+                </div>
+
+                <div class="content-example">
+                    <div>
+                        .input["text"] {
+                            background-color: red;
+                        }
+                    </div>
                 </div>
             </div>
 
@@ -46,7 +74,18 @@
                 <div class="content-header">checked input attribute</div>
 
                 <div class="content-description">
-                    
+                    to force an input type checkbox to be checked after the html loaded
+                </div>
+
+                <div class="content-example">
+                    <div class="before">
+                        <p><b>before (&lt;input type="checkbox"&gt;)</b></p>
+                        <input type="checkbox">
+                    </div>
+                    <div class="after">
+                        <p><b>before (&lt;input type="checkbox" checked&gt;)</b></p>
+                        <input type="checkbox" checked>
+                    </div>
                 </div>
             </div>
 
@@ -54,18 +93,17 @@
                 <div class="content-header">:checked input puesdo class</div>
 
                 <div class="content-description">
-                    
+                    selector matches every checked &lt;input&gt; element
+                </div>
+
+                <div class="content-example">
+                    input["checkbox"]:checked {
+                        width: 20px;
+                        height: 20px;
+                    }
+                    <input type="checkbox" id="checkbox-example" checked>
                 </div>
             </div>
-
-            <div class="content">
-                <div class="content-header">:focus-within puesdo class</div>
-
-                <div class="content-description">
-                    
-                </div>
-            </div>
-
         </div>
     </div>
 </body>
